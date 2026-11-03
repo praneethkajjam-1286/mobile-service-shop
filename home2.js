@@ -87,25 +87,6 @@ const header = $('.site-header');
 function setHeaderHeight() { if (header) root.style.setProperty('--header-h', `${header.offsetHeight}px`); }
 setHeaderHeight();
 
-/* ---------- Section 1 · Lens follows the pointer ---------- */
-const hero = $('.k-hero'), lens = $('#lens');
-let baseCx = 66, baseCy = 44;
-function lensBase() {
-  const w = innerWidth;
-  [baseCx, baseCy] = w <= 720 ? [50, 26] : w <= 900 ? [50, 34] : [66, 44];
-  lens?.style.setProperty('--cx', `${baseCx}%`);
-  lens?.style.setProperty('--cy', `${baseCy}%`);
-}
-lensBase();
-hero?.addEventListener('pointermove', e => {
-  if (!lens || motionPaused() || e.pointerType !== 'mouse') return;
-  const r = hero.getBoundingClientRect();
-  const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-  lens.style.setProperty('--cx', `${baseCx + x * 6}%`);
-  lens.style.setProperty('--cy', `${baseCy + y * 6}%`);
-});
-hero?.addEventListener('pointerleave', lensBase);
-
 /* ---------- Section 3 · Horizontal journey sizing ---------- */
 const journey = $('#journey'), track = $('#j-track'), jBar = $('#j-bar');
 const horizontalOK = () => !matchMedia('(max-width: 900px)').matches;
@@ -124,12 +105,6 @@ function onScroll() {
   header?.classList.toggle('scrolled', y > 20);
   if (toTop) toTop.hidden = y < 600;
 
-  // Hero lens opens as you scroll through the hero
-  if (hero) {
-    const open = motionPaused() ? 0 : Math.min(1, Math.max(0, y / (hero.offsetHeight * 0.75)));
-    hero.style.setProperty('--open', open.toFixed(3));
-  }
-
   // Journey: vertical scroll moves the cards sideways
   if (journey && track && horizontalOK()) {
     const start = journey.offsetTop - (header?.offsetHeight || 0);
@@ -143,7 +118,7 @@ function onScroll() {
   ticking = false;
 }
 window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
-window.addEventListener('resize', () => { setHeaderHeight(); lensBase(); sizeJourney(); onScroll(); });
+window.addEventListener('resize', () => { setHeaderHeight(); sizeJourney(); onScroll(); });
 window.addEventListener('load', () => { sizeJourney(); onScroll(); });
 sizeJourney();
 onScroll();
