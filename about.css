@@ -98,6 +98,7 @@ h1 em,h2 em{color:var(--blue);font-style:normal}
 .ambient-grid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 30% 50%,#000,transparent 70%);animation:grid-drift 22s linear infinite;pointer-events:none}
 .hero-inner{padding-block:60px 110px}
 .hero-inner p{font-size:20px;max-width:560px}
+.about-hero .actions{display:flex;width:fit-content;max-width:100%;direction:ltr;justify-content:flex-start;align-items:center}
 .hero-title{margin-bottom:28px}
 .hero-title .line{display:block;overflow:hidden;padding-bottom:.08em}
 .hero-in{display:inline-block;opacity:0;transform:translateY(40px);animation:rise .9s var(--ease) forwards;animation-delay:calc(var(--d) * .15s + .2s)}
