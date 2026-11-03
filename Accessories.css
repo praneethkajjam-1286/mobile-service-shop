@@ -348,3 +348,9 @@ h1 em,h2 em{color:var(--blue);font-style:normal}
 .card-brand .brand-text{align-items:center;text-align:center}
 .card-brand .brand-emblem{width:52px}
 @media (max-width:720px){.brand-emblem{width:40px}.brand-name{font-size:22px}.brand-tagline{font-size:8px}}
+.site-header nav>.nav-book{display:none}
+@media (max-width:767px){
+  .header-tools>.header-book{display:none}
+  .site-header nav>.nav-book{display:flex;justify-content:center;margin-top:8px;padding:12px 22px}
+  .site-header nav>.nav-book::after{display:none}
+}
