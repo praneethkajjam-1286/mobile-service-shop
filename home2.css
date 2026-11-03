@@ -110,9 +110,11 @@ h1 em,h2 em{color:var(--blue);font-style:normal}
 .section{padding:110px 0;border-bottom:1px solid var(--line);overflow:hidden}
 .section.alt{background:var(--surface)}
 .head{max-width:640px;margin-bottom:48px}
+.section .head{text-align:center;margin-inline:auto}
 .split-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px 40px;max-width:none}
+.section .split-head{justify-content:center;text-align:center}
 .split-head h2{margin:0}
-.split-head>p{max-width:380px;margin:0}
+.split-head>p{max-width:380px;margin:0 auto}
 
 /* ---------- 2 · Pillars ---------- */
 .pillars{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:22px}
@@ -132,8 +134,9 @@ h1 em,h2 em{color:var(--blue);font-style:normal}
 /* ---------- 3 · Horizontal journey ---------- */
 .journey{position:relative;border-bottom:1px solid var(--line);background:var(--bg)}
 .journey-sticky{position:sticky;top:var(--header-h);height:calc(100vh - var(--header-h));display:flex;flex-direction:column;justify-content:center;gap:34px;overflow:hidden}
+.journey-head{text-align:center;margin-inline:auto}
 .journey-head h2{margin-bottom:18px}
-.j-progress{height:4px;max-width:320px;border-radius:4px;background:var(--line);overflow:hidden}
+.j-progress{height:4px;max-width:320px;margin-inline:auto;border-radius:4px;background:var(--line);overflow:hidden}
 .j-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gradient-start),var(--blue))}
 [dir=rtl] .j-progress span{margin-inline-start:auto}
 .j-track{display:flex;gap:26px;padding-inline:max(48px,calc((100% - 1280px) / 2));will-change:transform}
@@ -168,7 +171,9 @@ h1 em,h2 em{color:var(--blue);font-style:normal}
 
 /* ---------- 5 · Care tips deck ---------- */
 .care-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.care-grid>div:first-child{text-align:center}
 .deck-controls{display:flex;align-items:center;gap:18px;margin-top:10px}
+.care-grid .deck-controls{justify-content:center}
 .deck-btn{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--blue);color:var(--blue);font-size:20px;transition:background .3s,color .3s,transform .3s var(--ease)}
 .deck-btn:hover{background:var(--blue);color:var(--primary-ink);transform:scale(1.08)}
 [dir=rtl] .deck-btn{transform:scaleX(-1)}
@@ -186,6 +191,8 @@ h1 em,h2 em{color:var(--blue);font-style:normal}
 
 /* ---------- 6 · Protect ---------- */
 .protect-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.protect-grid>.reveal{text-align:center}
+.protect-grid>.reveal>.slide-pill{margin-inline:auto}
 .protect-stack{position:relative;height:460px}
 .protect-stack img{position:absolute;object-fit:cover;border-radius:24px;border:5px solid var(--bg);background:var(--raised);box-shadow:0 30px 60px var(--shadow);transition:transform .7s var(--ease)}
 .ps-back{width:62%;height:62%;top:0;inset-inline-end:0;transform:rotate(6deg)}
