@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fixora service details — what's included, why choose it, pricing and answers to common questions.">
+<meta name="theme-color" content="#0E1C2A">
+<meta property="og:title" content="Service details | Fixora">
+<meta property="og:type" content="website">
+<title>Service details | Fixora — Mobile Repair &amp; Accessories</title>
+<link rel="icon" href="assets/branding/fixora-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/branding/fixora-logo.png">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('repair-theme')||'dark';document.documentElement.dir=localStorage.getItem('repair-direction')||'ltr';if(localStorage.getItem('repair-motion')==='paused')document.documentElement.dataset.motion='paused'}catch(e){}</script>
+<link rel="stylesheet" href="service-detail.css">
+<script defer src="service-detail.js"></script>
+</head>
+<body class="page-service-detail">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER (same as Home 1) ================= -->
+<header class="site-header">
+  <div class="header-wrap">
+    <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <details class="home-dropdown">
+        <summary>Home <span aria-hidden="true">⌄</span></summary>
+        <div>
+          <a href="index.html">Home 1 · The repair edit</a>
+          <a href="home2.html">Home 2 · A second life</a>
+        </div>
+      </details>
+      <a href="about.html">About</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="pricing.html">Pricing Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch to light theme" title="Change theme">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+      <button class="icon-btn" id="direction-toggle" aria-label="Switch to right-to-left layout" title="Change text direction" aria-pressed="false">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4"/></svg>
+      </button>
+      <a class="header-book btn primary" href="book-repair.html">Book a Repair</a>
+      <button class="menu-toggle icon-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- All content below is filled in by service-detail.js from ?service=<id> -->
+<main id="main" aria-busy="true">
+
+  <!-- ===== 1 · PREMIUM HERO ===== -->
+  <section class="d-hero" id="top">
+    <div class="d-hero-bg" aria-hidden="true"><img id="hero-img" alt=""></div>
+    <div class="d-hero-veil" aria-hidden="true"></div>
+    <div class="d-hero-rings" aria-hidden="true"><span></span><span></span></div>
+    <div class="wrap d-hero-inner">
+      <nav class="breadcrumb up" style="--d:0" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="services.html">Services</a><span aria-hidden="true">/</span><span id="crumb-current" aria-current="page"></span>
+      </nav>
+      <h1 class="up" style="--d:2" id="hero-title"></h1>
+      <p class="hero-lead up" style="--d:3" id="hero-lead"></p>
+      <ul class="hero-facts up" style="--d:4" id="hero-facts"></ul>
+      <div class="actions up" style="--d:5">
+        <a class="btn primary" id="hero-book" href="book-repair.html">Book this repair<span aria-hidden="true">↗</span></a>
+        <a class="btn ghost" href="#pricing">View pricing<span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+    <div class="switcher-wrap up" style="--d:6">
+      <div class="wrap">
+        <nav class="switcher" id="switcher" aria-label="Other services"></nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2 · SERVICE CONTEXT ===== -->
+  <section class="section" id="overview">
+    <div class="wrap overview-grid">
+      <div class="ov-copy reveal">
+        <span class="eyebrow"><i></i>About this service</span>
+        <h2 id="ov-title"></h2>
+        <div id="ov-body"></div>
+        <h3 class="list-title">Signs you may need it</h3>
+        <ul class="sign-list" id="ov-signs"></ul>
+      </div>
+      <div class="ov-visual reveal">
+        <figure class="ov-photo"><img id="ov-img" alt="" loading="lazy"></figure>
+        <div class="included-card">
+          <p class="ic-title">What's included</p>
+          <ol class="ic-steps" id="ov-included"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3 · WHY CHOOSE THIS SERVICE ===== -->
+  <section class="section alt" id="why">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow"><i></i>Why choose this service</span>
+        <h2 id="why-title"></h2>
+      </div>
+      <div class="why-grid" id="why-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== 4 · PRICING ===== -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow"><i></i>Pricing</span>
+        <h2 id="price-title"></h2>
+        <p id="price-intro"></p>
+      </div>
+      <div class="price-grid" id="price-grid"></div>
+      <p class="price-note">*Illustrative starting prices, not a repair quote. Your model, diagnosis, part selection and availability set the final quote.</p>
+    </div>
+  </section>
+
+  <!-- ===== 5 · FAQS ===== -->
+  <section class="section alt" id="faq">
+    <div class="wrap faq-layout">
+      <div class="faq-intro reveal">
+        <span class="eyebrow"><i></i>FAQs</span>
+        <h2 id="faq-title"></h2>
+        <p>Still unsure? Ask the studio when you prepare your enquiry.</p>
+        <a class="btn line" href="contact.html">Contact the studio<span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="faq-list reveal" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- ===== 6 · CTA CARD ===== -->
+  <section class="cta-section" id="next-step">
+    <div class="wrap">
+      <div class="cta-card reveal" id="cta-card">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="cta-copy">
+          <span class="eyebrow"><i></i>Ready to start?</span>
+          <h2 id="cta-title"></h2>
+          <p id="cta-text"></p>
+          <div class="actions">
+            <a class="btn primary" id="cta-book" href="book-repair.html">Prepare an enquiry<span aria-hidden="true">↗</span></a>
+            <a class="btn ghost" href="service.html">All services<span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="cta-ring" aria-hidden="true"><img id="cta-img" alt=""></div>
+      </div>
+
+      <nav class="pager" aria-label="Previous and next service">
+        <a class="pager-link prev" id="pager-prev"><small>Previous service</small><b></b></a>
+        <a class="pager-link next" id="pager-next"><small>Next service</small><b></b></a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER (same as Home 1) ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+        <p>Thoughtful repairs and considered accessories. Keep your everyday connected, one detail at a time.</p>
+        <nav class="footer-circles" aria-label="Quick actions">
+          <a href="services.html" aria-label="Explore repairs"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 20 7-7m3-9a6 6 0 0 0-6 8l-6 6 4 4 6-6a6 6 0 0 0 8-6l-4 3-4-4 3-5Z"/></svg></a>
+          <a href="accessories.html" aria-label="Browse accessories"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg></a>
+          <a href="book-repair.html" aria-label="Prepare a repair enquiry"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+          <button id="motion-toggle" aria-pressed="false" aria-label="Pause decorative animations" title="Pause animations">Ⅱ</button>
+        </nav>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="accessories.html">Accessories</a><a href="pricing.html">Pricing Guide</a><a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Our services</h3>
+        <a href="service-detail.html?service=screen">Screen &amp; display</a><a href="service-detail.html?service=battery">Battery &amp; power</a><a href="service-detail.html?service=software">Software support</a><a href="service-detail.html?service=charging">Charging &amp; connections</a><a href="pricing.html#estimator">Repair estimates</a><a href="accessories.html#collection">Everyday accessories</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact us</h3>
+        <a href="contact.html#before-visit"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Plan your visit<br><small>Location to be confirmed</small></span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><span>Discuss your device</span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Prepare a repair enquiry</span></a>
+        <a href="contact.html#visit-guide"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg><span>Your preferred visit date<br><small>Subject to shop confirmation</small></span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fixora. Website concept.</span>
+      <span>Repair thoughtfully. Reconnect beautifully.</span>
+      <span class="photo-credit">Photos: Aweek Jiang, Revendo, Samsung Memory, Clint Bustrillos, Erik Mclean, Solen Feyissa, Marcus Urbenz, insung yoon, Alina Chernysheva &amp; Joel Rohland on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top" hidden>↑</button>
+</body>
+</html>

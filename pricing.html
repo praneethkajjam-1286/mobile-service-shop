@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fixora pricing guide — illustrative starting prices for screen, battery, software and charging repairs, plus an estimator for your device range.">
+<meta name="theme-color" content="#0E1C2A">
+<meta property="og:title" content="Pricing Guide | Fixora">
+<meta property="og:description" content="Illustrative starting prices and a repair estimator. Your final quote is confirmed after an assessment.">
+<meta property="og:type" content="website">
+<title>Pricing Guide | Fixora — Mobile Repair &amp; Accessories</title>
+<link rel="icon" href="assets/branding/fixora-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/branding/fixora-logo.png">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('repair-theme')||'dark';document.documentElement.dir=localStorage.getItem('repair-direction')||'ltr';if(localStorage.getItem('repair-motion')==='paused')document.documentElement.dataset.motion='paused'}catch(e){}</script>
+<link rel="stylesheet" href="pricing.css">
+<script defer src="pricing.js"></script>
+</head>
+<body class="page-pricing">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-wrap">
+    <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <details class="home-dropdown">
+        <summary>Home <span aria-hidden="true">⌄</span></summary>
+        <div>
+          <a href="index.html">Home 1 · The repair edit</a>
+          <a href="home2.html">Home 2 · A second life</a>
+        </div>
+      </details>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="pricing.html" aria-current="page">Pricing Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch to light theme" title="Change theme">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+      <button class="icon-btn" id="direction-toggle" aria-label="Switch to right-to-left layout" title="Change text direction" aria-pressed="false">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4"/></svg>
+      </button>
+      <a class="header-book btn primary" href="book-repair.html">Book a Repair</a>
+      <button class="menu-toggle icon-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== SECTION 1 · FULL-VIEWPORT HERO (centred title + fanned price cards) ===== -->
+  <section class="pr-hero" id="top">
+    <div class="beams" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-center">
+      <h1 class="up" style="--d:1">Know the price<br><em>before the repair.</em></h1>
+      <p class="up" style="--d:2">Illustrative starting prices for every core repair. Your exact quote is confirmed after an assessment, before any work begins.</p>
+
+      <div class="fan up" style="--d:3" id="fan">
+        <a class="fan-card" href="#estimator" data-repair="screen" style="--i:0">
+          <img src="assets/images/pricing-hero-screen.png" alt="Technician examining a phone screen under magnification" loading="eager">
+          <span class="fc-body"><small>Screen</small><b>₹<span class="count" data-to="1499">1,499</span>*</b></span>
+        </a>
+        <a class="fan-card" href="#estimator" data-repair="battery" style="--i:1">
+          <img src="assets/images/pricing-hero-battery.jpg" alt="Phone repair technician at work" loading="eager">
+          <span class="fc-body"><small>Battery</small><b>₹<span class="count" data-to="999">999</span>*</b></span>
+        </a>
+        <a class="fan-card" href="#estimator" data-repair="software" style="--i:2">
+          <img src="assets/images/pricing-hero-software.png" alt="Technician working with phone components and diagnostic equipment" loading="eager">
+          <span class="fc-body"><small>Software</small><b>₹<span class="count" data-to="499">499</span>*</b></span>
+        </a>
+        <a class="fan-card" href="#estimator" data-repair="charging" style="--i:3">
+          <img src="assets/images/pricing-hero-charging.png" alt="Close-up of a technician repairing a mobile phone" loading="eager">
+          <span class="fc-body"><small>Charging</small><b>₹<span class="count" data-to="799">799</span>*</b></span>
+        </a>
+      </div>
+
+      <!-- CTA pattern: ticket buttons -->
+      <div class="hero-ctas up" style="--d:4">
+        <a class="ticket-btn" href="#estimator"><span class="tb-main">Estimate my repair</span><span class="tb-stub" aria-hidden="true">→</span></a>
+        <a class="link-under" href="#price-table">See the full price table</a>
+      </div>
+      <p class="fineprint up" style="--d:5">*Illustrative starting prices, not a repair quote.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2 · ESTIMATOR ===== -->
+  <section class="section" id="estimator">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow"><i></i>Repair estimator</span>
+        <h2>Build your<br>estimate.</h2>
+        <p>Pick a repair, then slide to your device range. The range updates instantly.</p>
+      </div>
+      <div class="est-grid">
+        <div class="est-controls reveal">
+          <p class="label" id="repair-label">1 · Choose a repair</p>
+          <div class="repair-cards" role="radiogroup" aria-labelledby="repair-label">
+            <button type="button" role="radio" aria-checked="true" data-repair="screen">
+              <img src="assets/images/pricing-estimator-screen.png" alt="" loading="lazy">
+              <span>Screen</span>
+            </button>
+            <button type="button" role="radio" aria-checked="false" data-repair="battery" tabindex="-1">
+              <img src="assets/images/pricing-estimator-battery.png" alt="" loading="lazy">
+              <span>Battery</span>
+            </button>
+            <button type="button" role="radio" aria-checked="false" data-repair="software" tabindex="-1">
+              <img src="assets/images/pricing-estimator-software.png" alt="" loading="lazy">
+              <span>Software</span>
+            </button>
+            <button type="button" role="radio" aria-checked="false" data-repair="charging" tabindex="-1">
+              <img src="assets/images/pricing-estimator-charging.png" alt="" loading="lazy">
+              <span>Charging</span>
+            </button>
+          </div>
+
+          <label class="label" for="tier-range">2 · Device range: <b id="tier-name">Everyday models</b></label>
+          <input type="range" id="tier-range" min="0" max="2" step="1" value="0" aria-valuetext="Everyday models">
+          <div class="range-ticks" aria-hidden="true"><span>Everyday</span><span>Premium</span><span>Flagship</span></div>
+          <p class="tier-note" id="tier-note"></p>
+        </div>
+
+        <div class="est-result reveal" aria-live="polite">
+          <span class="er-tag">Illustrative range</span>
+          <p class="er-repair" id="er-repair">Screen replacement</p>
+          <p class="er-price"><span id="er-min">₹1,499</span><span class="dash">–</span><span id="er-max">₹2,499</span></p>
+          <div class="er-bar" aria-hidden="true"><span id="er-bar-fill"></span></div>
+          <p class="er-small">Your model, diagnosis, part selection and availability set the final quote.</p>
+          <a class="ticket-btn full" id="est-enquiry" href="book-repair.html?service=screen&amp;tier=standard"><span class="tb-main">Prepare an enquiry with this estimate</span><span class="tb-stub" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 · PRICE TABLE ===== -->
+  <section class="section alt" id="price-table">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow"><i></i>At a glance</span>
+        <h2>Every range,<br>side by side.</h2>
+        <p>Highlight a device range to compare. Prices are illustrative starting ranges.</p>
+      </div>
+      <div class="tier-switch reveal" role="group" aria-label="Highlight a device range">
+        <button type="button" data-col="1" aria-pressed="true">Everyday</button>
+        <button type="button" data-col="2" aria-pressed="false">Premium</button>
+        <button type="button" data-col="3" aria-pressed="false">Flagship</button>
+      </div>
+      <div class="table-wrap reveal">
+        <table class="price-table" id="ptable" data-active="1">
+          <caption class="sr-only">Illustrative starting price ranges by repair and device range</caption>
+          <thead>
+            <tr><th scope="col">Repair</th><th scope="col">Everyday models</th><th scope="col">Premium models</th><th scope="col">Latest flagships</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><span class="ri">▢</span>Screen replacement</th><td>₹1,499 – ₹2,499</td><td>₹2,699 – ₹3,699</td><td>₹4,199 – ₹5,199</td></tr>
+            <tr><th scope="row"><span class="ri">▭</span>Battery replacement</th><td>₹999 – ₹1,799</td><td>₹1,799 – ₹2,599</td><td>₹2,799 – ₹3,599</td></tr>
+            <tr><th scope="row"><span class="ri">↻</span>Software support</th><td>₹499 – ₹999</td><td>₹499 – ₹999</td><td>₹499 – ₹999</td></tr>
+            <tr><th scope="row"><span class="ri">ϟ</span>Charging port</th><td>₹799 – ₹1,599</td><td>₹1,399 – ₹2,199</td><td>₹2,199 – ₹2,999</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fineprint">All prices are illustrative and not a repair quote. Software support is priced the same across device ranges.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4 · WHAT AFFECTS THE PRICE ===== -->
+  <section class="section" id="factors">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow"><i></i>What shapes your quote</span>
+        <h2>Four things<br>set the final price.</h2>
+      </div>
+      <div class="factor-grid">
+        <article class="factor reveal" style="--stagger:0">
+          <img src="assets/images/pricing-factor-model.png" alt="Smartphone display with shattered glass" loading="lazy">
+          <div class="factor-body"><span class="f-num">01</span><h3>Your model</h3><p class="f-more">Different phones use different parts and take different amounts of work.</p></div>
+        </article>
+        <article class="factor reveal" style="--stagger:1">
+          <img src="assets/images/pricing-factor-diagnosis.png" alt="Technician using a precision repair tool" loading="lazy">
+          <div class="factor-body"><span class="f-num">02</span><h3>The diagnosis</h3><p class="f-more">The assessment shows the actual fault, which may differ from the first symptom.</p></div>
+        </article>
+        <article class="factor reveal" style="--stagger:2">
+          <img src="assets/images/pricing-factor-parts.png" alt="Mobile phone components arranged for repair" loading="lazy">
+          <div class="factor-body"><span class="f-num">03</span><h3>Part selection</h3><p class="f-more">Where more than one part option exists, we explain each before you choose.</p></div>
+        </article>
+        <article class="factor reveal" style="--stagger:3">
+          <img src="assets/images/pricing-factor-availability.png" alt="Technician repairing a mobile device in a workshop" loading="lazy">
+          <div class="factor-body"><span class="f-num">04</span><h3>Availability</h3><p class="f-more">Part availability for your exact model can affect both price and timing.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5 · FROM ESTIMATE TO CONFIRMED QUOTE ===== -->
+  <section class="section alt" id="quote-journey">
+    <div class="wrap jr-grid">
+      <figure class="jr-visual reveal">
+        <img src="assets/images/pricing-quote-journey.png" alt="Mobile phone and components arranged at a repair studio" loading="lazy">
+        <div class="receipt" aria-hidden="true">
+          <span>Estimate</span><b>₹1,499 – ₹2,499</b>
+          <span>Confirmed quote</span><b class="ok">After assessment ✓</b>
+        </div>
+      </figure>
+      <div>
+        <div class="head reveal">
+          <span class="eyebrow"><i></i>No surprises</span>
+          <h2>From estimate<br>to confirmed quote.</h2>
+        </div>
+        <ol class="jr-steps">
+          <li class="reveal" style="--stagger:0"><span class="jr-dot">1</span><div><h3>Estimate here</h3><p>Use the guide to see a sample range for your repair.</p></div></li>
+          <li class="reveal" style="--stagger:1"><span class="jr-dot">2</span><div><h3>Device assessment</h3><p>We examine your phone to confirm the actual fault.</p></div></li>
+          <li class="reveal" style="--stagger:2"><span class="jr-dot">3</span><div><h3>Confirmed quote</h3><p>You see the repair, part options and exact price.</p></div></li>
+          <li class="reveal" style="--stagger:3"><span class="jr-dot">4</span><div><h3>Your decision</h3><p>Work begins only after you say yes.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6 · PRICING FAQ ===== -->
+  <section class="section" id="pricing-faq">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow"><i></i>Pricing questions</span>
+        <h2>Straight answers.</h2>
+      </div>
+      <div class="faq-cards">
+        <details class="qa reveal" style="--stagger:0">
+          <summary>Are these prices final?<span class="qa-x" aria-hidden="true"></span></summary>
+          <p>No. They are illustrative starting ranges. The final quote is confirmed after your device is assessed.</p>
+        </details>
+        <details class="qa reveal" style="--stagger:1">
+          <summary>Do I pay for the assessment?<span class="qa-x" aria-hidden="true"></span></summary>
+          <p>Ask the studio when you prepare your enquiry, so you know before you visit.</p>
+        </details>
+        <details class="qa reveal" style="--stagger:2">
+          <summary>Why is software the same for all ranges?<span class="qa-x" aria-hidden="true"></span></summary>
+          <p>Software support doesn't usually involve replacement parts, so the starting range doesn't change by device range.</p>
+        </details>
+        <details class="qa reveal" style="--stagger:3">
+          <summary>What if the fault is different from what I expected?<span class="qa-x" aria-hidden="true"></span></summary>
+          <p>We'll explain what we found and give you a new confirmed quote. Nothing proceeds without your decision.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7 · CTA (new pattern: tear-off ticket) ===== -->
+  <section class="cta-ticket-zone" id="next-step">
+    <div class="wrap">
+      <div class="big-ticket reveal">
+        <div class="bt-main">
+          <span class="eyebrow"><i></i>Ready for a real quote?</span>
+          <h2>Bring your phone.<br><em>Leave with clarity.</em></h2>
+          <p>Prepare an enquiry with your model and symptoms. You'll get a confirmed quote after the assessment.</p>
+          <div class="bt-links">
+            <a class="pill-link" href="services.html">Explore services</a>
+            <a class="pill-link" href="contact.html">Ask a question</a>
+          </div>
+        </div>
+        <a class="bt-stub" href="book-repair.html" aria-label="Book a repair">
+          <img src="assets/images/pricing-cta-ticket.png" alt="" loading="lazy">
+          <span class="stub-text"><small>Admit one</small><b>Book a repair</b><span class="stub-arrow" aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+        <p>Thoughtful repairs and considered accessories. Keep your everyday connected, one detail at a time.</p>
+        <nav class="footer-circles" aria-label="Quick actions">
+          <a href="services.html" aria-label="Explore repairs"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 20 7-7m3-9a6 6 0 0 0-6 8l-6 6 4 4 6-6a6 6 0 0 0 8-6l-4 3-4-4 3-5Z"/></svg></a>
+          <a href="accessories.html" aria-label="Browse accessories"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg></a>
+          <a href="book-repair.html" aria-label="Prepare a repair enquiry"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+          <button id="motion-toggle" aria-pressed="false" aria-label="Pause decorative animations" title="Pause animations">Ⅱ</button>
+        </nav>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="accessories.html">Accessories</a><a href="pricing.html">Pricing Guide</a><a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Our services</h3>
+        <a href="services.html#screen">Screen &amp; display</a><a href="services.html#battery">Battery &amp; power</a><a href="services.html#software">Software support</a><a href="services.html#additional">Charging &amp; connections</a><a href="pricing.html#estimator">Repair estimates</a><a href="accessories.html#collection">Everyday accessories</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact us</h3>
+        <a href="contact.html#before-visit"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Plan your visit<br><small>Location to be confirmed</small></span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><span>Discuss your device</span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Prepare a repair enquiry</span></a>
+        <a href="contact.html#visit-guide"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg><span>Your preferred visit date<br><small>Subject to shop confirmation</small></span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fixora. Website concept.</span>
+      <span>Repair thoughtfully. Reconnect beautifully.</span>
+      <span class="photo-credit">Photos: Aweek Jiang, Samsung Memory, Erik Mclean, Solen Feyissa, Alina Chernysheva, Clint Bustrillos, insung yoon, Joel Rohland &amp; Revendo on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top" hidden>↑</button>
+</body>
+</html>

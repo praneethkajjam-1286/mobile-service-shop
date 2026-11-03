@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Contact Fixora — prepare a repair enquiry, plan your visit and get the right questions ready before you come in.">
+<meta name="theme-color" content="#0E1C2A">
+<meta property="og:title" content="Contact | Fixora">
+<meta property="og:description" content="Prepare a repair enquiry and plan your visit to Fixora.">
+<meta property="og:type" content="website">
+<title>Contact | Fixora — Mobile Repair &amp; Accessories</title>
+<link rel="icon" href="assets/branding/fixora-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/branding/fixora-logo.png">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('repair-theme')||'dark';document.documentElement.dir=localStorage.getItem('repair-direction')||'ltr';if(localStorage.getItem('repair-motion')==='paused')document.documentElement.dataset.motion='paused'}catch(e){}</script>
+<link rel="stylesheet" href="contact.css">
+<script defer src="contact.js"></script>
+</head>
+<body class="page-contact">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-wrap">
+    <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <details class="home-dropdown">
+        <summary>Home <span aria-hidden="true">⌄</span></summary>
+        <div>
+          <a href="index.html">Home 1 · The repair edit</a>
+          <a href="home2.html">Home 2 · A second life</a>
+        </div>
+      </details>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="pricing.html">Pricing Guide</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch to light theme" title="Change theme">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+      <button class="icon-btn" id="direction-toggle" aria-label="Switch to right-to-left layout" title="Change text direction" aria-pressed="false">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4"/></svg>
+      </button>
+      <a class="header-book btn primary" href="book-repair.html">Book a Repair</a>
+      <button class="menu-toggle icon-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== SECTION 1 · FULL-VIEWPORT HERO (split: copy + live chat phone) ===== -->
+  <section class="ct-hero" id="top">
+    <div class="mesh" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="dot-grid" aria-hidden="true"></div>
+    <div class="wrap hero-split">
+      <div class="hero-copy">
+        <h1 class="up" style="--d:1">Tell us what's<br><span class="hl">going on.</span></h1>
+        <p class="up" style="--d:2">Start with your phone model. We'll help you prepare the details and questions that make your visit quick and clear.</p>
+
+        <!-- CTA pattern: quick-start search bar -->
+        <form class="quick-start up" style="--d:3" id="quick-start" role="search" aria-label="Start your enquiry">
+          <span class="qs-icon" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></span>
+          <label for="qs-model" class="sr-only">Your phone model</label>
+          <input id="qs-model" type="text" placeholder="Your phone model, e.g. Galaxy A54" autocomplete="off">
+          <button type="submit">Start <span aria-hidden="true">→</span></button>
+        </form>
+
+        <ul class="hero-facts up" style="--d:4">
+          <li><span>⬡</span>Diagnosis before decision</li>
+          <li><span>⬡</span>Quote confirmed first</li>
+          <li><span>⬡</span>Location to be confirmed</li>
+        </ul>
+      </div>
+
+      <div class="hero-device up" style="--d:2" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="chat-head"><span class="avatar">R</span><div><b>Fixora studio</b><small>Repair enquiries</small></div></div>
+          <div class="chat" id="hero-chat">
+            <div class="msg them">Hi! What's happening with your phone?</div>
+            <div class="msg me">My screen cracked and touch is patchy 😕</div>
+            <div class="msg them">Let's start with a screen &amp; touch assessment.</div>
+            <div class="msg them">You'll see the options and a confirmed quote before any work.</div>
+            <div class="msg me">Perfect, thanks!</div>
+            <div class="msg typing"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="float-chip c1"><span class="live"></span>Enquiry prepared</div>
+        <div class="float-chip c2">✓ Quote first</div>
+        <div class="orbit-ring"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2 · WAYS TO GET STARTED (flip cards) ===== -->
+  <section class="section" id="ways">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow"><i></i>Ways to get started</span>
+        <h2>Pick the route<br>that suits you.</h2>
+        <p>Hover or tap a card to see what happens next.</p>
+      </div>
+      <div class="flip-grid">
+        <div class="flip reveal" style="--stagger:0" tabindex="0" aria-label="Prepare an enquiry">
+          <div class="flip-inner">
+            <div class="flip-face front">
+              <span class="flip-icon" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
+              <h3>Prepare an enquiry</h3>
+              <p>Share your model and symptoms.</p>
+              <span class="flip-hint" aria-hidden="true">↻</span>
+            </div>
+            <div class="flip-face back">
+              <p>Fill in the short form on this page. You'll get a ready-made enquiry file to review and share with the studio.</p>
+              <a class="text-link" href="#enquiry">Open the form <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="flip reveal" style="--stagger:1" tabindex="0" aria-label="Plan your visit">
+          <div class="flip-inner">
+            <div class="flip-face front">
+              <span class="flip-icon" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <h3>Plan your visit</h3>
+              <p>Pick a preferred date and time.</p>
+              <span class="flip-hint" aria-hidden="true">↻</span>
+            </div>
+            <div class="flip-face back">
+              <p>Choose when suits you best. Your preferred date is a request, subject to shop confirmation.</p>
+              <a class="text-link" href="#visit-guide">Open the planner <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="flip reveal" style="--stagger:2" tabindex="0" aria-label="Check pricing first">
+          <div class="flip-inner">
+            <div class="flip-face front">
+              <span class="flip-icon" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M9 11h6M9 15h4M6 3h12v18H6z"/></svg></span>
+              <h3>Check pricing first</h3>
+              <p>See illustrative starting prices.</p>
+              <span class="flip-hint" aria-hidden="true">↻</span>
+            </div>
+            <div class="flip-face back">
+              <p>Compare sample ranges by repair and device. The final quote is confirmed after an assessment.</p>
+              <a class="text-link" href="pricing.html">Open the pricing guide <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 · MULTI-STEP ENQUIRY FORM ===== -->
+  <section class="section alt" id="enquiry">
+    <div class="wrap enquiry-grid">
+      <div class="enquiry-intro reveal">
+        <span class="eyebrow"><i></i>Repair enquiry</span>
+        <h2>Three quick steps.</h2>
+        <p>Your enquiry is prepared on your device as a text file. Nothing is sent automatically and no appointment is confirmed until the studio replies.</p>
+        <ul class="note-list">
+          <li>No technical vocabulary needed</li>
+          <li>Review everything before sharing</li>
+          <li>Takes about two minutes</li>
+        </ul>
+      </div>
+
+      <form class="stepper reveal" id="enquiry-form" novalidate>
+        <div class="step-progress" aria-hidden="true"><span id="step-bar"></span></div>
+        <ol class="step-labels" aria-label="Form steps">
+          <li class="active">You</li><li>Device</li><li>Details</li>
+        </ol>
+
+        <fieldset class="step active" data-step="1">
+          <legend class="sr-only">Step 1: About you</legend>
+          <div class="field"><input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required><label for="f-name">Your name</label></div>
+          <div class="field"><input id="f-email" name="email" type="email" placeholder=" " autocomplete="email" required><label for="f-email">Email</label></div>
+          <div class="field"><input id="f-phone" name="phone" type="tel" placeholder=" " autocomplete="tel"><label for="f-phone">Phone <span>(optional)</span></label></div>
+        </fieldset>
+
+        <fieldset class="step" data-step="2" hidden>
+          <legend class="sr-only">Step 2: Your device</legend>
+          <div class="field"><input id="f-model" name="model" type="text" placeholder=" " required><label for="f-model">Phone model</label></div>
+          <p class="chip-label" id="issue-label">What's the issue?</p>
+          <div class="chips" role="radiogroup" aria-labelledby="issue-label">
+            <label class="chip"><input type="radio" name="issue" value="Screen &amp; display" required><span>Screen</span></label>
+            <label class="chip"><input type="radio" name="issue" value="Battery &amp; power"><span>Battery</span></label>
+            <label class="chip"><input type="radio" name="issue" value="Software support"><span>Software</span></label>
+            <label class="chip"><input type="radio" name="issue" value="Charging &amp; connections"><span>Charging</span></label>
+            <label class="chip"><input type="radio" name="issue" value="Accessory question"><span>Accessory</span></label>
+            <label class="chip"><input type="radio" name="issue" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" data-step="3" hidden>
+          <legend class="sr-only">Step 3: Details</legend>
+          <div class="field"><textarea id="f-details" name="details" rows="4" placeholder=" " required></textarea><label for="f-details">What happened?</label></div>
+          <div class="field"><input id="f-date" name="date" type="date" placeholder=" " required><label for="f-date" class="fixed">Preferred visit date</label></div>
+          <label class="consent"><input type="checkbox" name="consent" required> I understand this prepares a file only. Nothing is sent and no appointment is confirmed.</label>
+        </fieldset>
+
+        <p class="form-error" id="form-error" role="alert"></p>
+        <div class="step-actions">
+          <button type="button" class="ghost-btn" id="prev-step" disabled>← Back</button>
+          <button type="button" class="next-btn" id="next-step">Next step <span aria-hidden="true">→</span></button>
+          <button type="submit" class="next-btn" id="submit-step" hidden>Prepare my enquiry <span aria-hidden="true">✓</span></button>
+        </div>
+        <div class="form-result" id="form-result" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4 · BEFORE YOU VISIT (interactive checklist) ===== -->
+  <section class="section" id="before-visit">
+    <div class="wrap check-grid">
+      <div class="ring-box reveal">
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="ring-bg" cx="60" cy="60" r="52"/>
+          <circle class="ring-fg" id="ring-fg" cx="60" cy="60" r="52"/>
+        </svg>
+        <div class="ring-label"><b id="ring-count">0/5</b><small>ready</small></div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow"><i></i>Before you visit</span>
+        <h2>Your quick<br>prep checklist.</h2>
+        <p>Tick each item as you go. These steps help the assessment go smoothly.</p>
+        <ul class="prep-list" id="prep-list">
+          <li><label><input type="checkbox"><span class="tick" aria-hidden="true"></span><span>Back up your photos and data where possible</span></label></li>
+          <li><label><input type="checkbox"><span class="tick" aria-hidden="true"></span><span>Note your exact phone model</span></label></li>
+          <li><label><input type="checkbox"><span class="tick" aria-hidden="true"></span><span>Write down when the problem started</span></label></li>
+          <li><label><input type="checkbox"><span class="tick" aria-hidden="true"></span><span>Bring your charger and cable if it's a charging issue</span></label></li>
+          <li><label><input type="checkbox"><span class="tick" aria-hidden="true"></span><span>Know your screen lock code for testing</span></label></li>
+        </ul>
+        <p class="all-set" id="all-set" hidden>You're all set. ✓</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5 · VISIT GUIDE / PLANNER ===== -->
+  <section class="section alt" id="visit-guide">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow"><i></i>Visit guide</span>
+        <h2>Plan your visit.</h2>
+        <p>Choose a preferred day and time of day. We'll turn it into a note you can copy into your enquiry.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="planner reveal">
+          <p class="chip-label">Preferred day</p>
+          <div class="day-strip" id="day-strip" role="radiogroup" aria-label="Preferred day"></div>
+          <p class="chip-label">Time of day</p>
+          <div class="time-chips" role="radiogroup" aria-label="Time of day">
+            <button type="button" role="radio" aria-checked="false" data-time="Morning">Morning</button>
+            <button type="button" role="radio" aria-checked="false" data-time="Afternoon">Afternoon</button>
+            <button type="button" role="radio" aria-checked="false" data-time="Evening">Evening</button>
+          </div>
+          <div class="visit-note" aria-live="polite">
+            <span id="visit-text">Pick a day and a time of day.</span>
+            <button type="button" class="copy-btn" id="copy-visit" disabled>Copy note</button>
+          </div>
+          <p class="small">Your preferred visit date is subject to shop confirmation.</p>
+        </div>
+        <figure class="map-card reveal">
+          <img src="assets/images/contact-visit-guide.png" alt="Contact support icon over a person reaching toward a digital interface" loading="lazy">
+          <div class="pin" aria-hidden="true"><span></span></div>
+          <figcaption>
+            <b>Studio location</b>
+            <span>To be confirmed. Details will be shared when the studio confirms your visit.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6 · FAQ ===== -->
+  <section class="section" id="contact-faq">
+    <div class="wrap">
+      <div class="faq-heading reveal">
+        <span class="eyebrow"><i></i>Questions</span>
+        <h2>Before you<br>get in touch.</h2>
+        <p>Quick answers to what people usually ask first.</p>
+      </div>
+      <div class="faq-grid">
+        <figure class="faq-visual reveal">
+          <img src="assets/images/contact-faq.png" alt="Questions and answers above a smartphone" loading="lazy">
+        </figure>
+        <div class="faq reveal">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Does the form send my enquiry?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>No. It prepares a text file on your device. You review it and share it with the studio yourself.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Is my preferred date a confirmed appointment?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Not yet. Preferred dates are requests and are subject to shop confirmation.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Will I get a quote before any work?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Yes. Every repair starts with an assessment, and you review the options and a confirmed quote before deciding.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">What if I don't know what's wrong?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>That's fine. Choose "Not sure" in the form and describe what you're seeing in your own words.</p></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7 · CTA (new pattern: slide to start) ===== -->
+  <section class="cta-slide-zone" id="next-step">
+    <div class="orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="wrap cta-center reveal">
+      <span class="eyebrow"><i></i>Ready?</span>
+      <h2>Your phone,<br><em>back in your hand.</em></h2>
+      <p>Slide to start your repair enquiry.</p>
+      <div class="slider-cta" id="slider-cta" data-href="book-repair.html">
+        <span class="slider-text">Slide to book a repair</span>
+        <span class="slider-fill" aria-hidden="true"></span>
+        <button type="button" class="slider-knob" id="slider-knob" aria-label="Book a repair. Press Enter, or drag to the end">→</button>
+      </div>
+      <a class="plain-link" href="book-repair.html">Or open the booking page directly</a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+        <p>Thoughtful repairs and considered accessories. Keep your everyday connected, one detail at a time.</p>
+        <nav class="footer-circles" aria-label="Quick actions">
+          <a href="services.html" aria-label="Explore repairs"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 20 7-7m3-9a6 6 0 0 0-6 8l-6 6 4 4 6-6a6 6 0 0 0 8-6l-4 3-4-4 3-5Z"/></svg></a>
+          <a href="accessories.html" aria-label="Browse accessories"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg></a>
+          <a href="book-repair.html" aria-label="Prepare a repair enquiry"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+          <button id="motion-toggle" aria-pressed="false" aria-label="Pause decorative animations" title="Pause animations">Ⅱ</button>
+        </nav>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="accessories.html">Accessories</a><a href="pricing.html">Pricing Guide</a><a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Our services</h3>
+        <a href="services.html#screen">Screen &amp; display</a><a href="services.html#battery">Battery &amp; power</a><a href="services.html#software">Software support</a><a href="services.html#additional">Charging &amp; connections</a><a href="pricing.html#estimator">Repair estimates</a><a href="accessories.html#collection">Everyday accessories</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact us</h3>
+        <a href="contact.html#before-visit"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Plan your visit<br><small>Location to be confirmed</small></span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><span>Discuss your device</span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Prepare a repair enquiry</span></a>
+        <a href="contact.html#visit-guide"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg><span>Your preferred visit date<br><small>Subject to shop confirmation</small></span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fixora. Website concept.</span>
+      <span>Repair thoughtfully. Reconnect beautifully.</span>
+      <span class="photo-credit">Photo: Joel Rohland on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top" hidden>↑</button>
+</body>
+</html>

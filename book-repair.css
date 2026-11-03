@@ -1,0 +1,189 @@
+/* ==========================================================
+   Fixora — Book a Repair (standalone, no navbar or footer)
+   Colours and typography follow Home 1.
+   ========================================================== */
+@font-face{font-family:DM;src:url(fonts/dm-sans.ttf) format('truetype');font-display:swap;font-weight:100 900}
+
+:root{
+  --bg:#0E1C2A;--surface:#122638;--raised:#1C3548;--panel:#173044;
+  --ink:#EFF8FF;--muted:#BCD0DF;--line:#aadfe72e;
+  --blue:#AADFE7;--primary:#AADFE7;--primary-ink:#0E1C2A;
+  --secondary:#B8C9F1;--secondary-ink:#11243B;
+  --gradient-start:#13494F;--gradient-end:#30416F;
+  --glow-blue:#13494f99;--glow-orchid:#30416f99;--shadow:#040e1b66;
+  --danger:#ffb4b4;--ok:#7de0a8;
+  --field-h:54px;
+  --ease:cubic-bezier(.22,.8,.24,1);
+  color-scheme:dark;font-family:DM,Arial,sans-serif
+}
+:root[data-theme=light]{
+  --bg:#F0F7FB;--surface:#E7F0F8;--raised:#D9E9F4;--panel:#E1EDF6;
+  --ink:#173447;--muted:#4C6376;--line:#285c9133;
+  --blue:#285C91;--primary:#285C91;--primary-ink:#fff;
+  --secondary:#226873;--secondary-ink:#fff;
+  --gradient-start:#C5E9F0;--gradient-end:#D4DFF8;
+  --glow-blue:#c5e9f0cc;--glow-orchid:#d4dff8cc;--shadow:#1734471f;
+  --danger:#a12a2a;--ok:#1d7a4a;
+  color-scheme:light
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.65}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+img{display:block;max-width:100%;height:auto}
+p{margin:0}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.skip{position:fixed;top:-80px;left:16px;z-index:99;padding:10px 18px;border-radius:8px;background:var(--blue);color:var(--primary-ink)}
+.skip:focus{top:12px}
+.ui-icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Background ---------- */
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(ellipse at 90% 0%,var(--glow-orchid),transparent 55%),radial-gradient(ellipse at 0% 100%,var(--glow-blue),transparent 55%),var(--bg)}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.6;animation:float 18s ease-in-out infinite}
+.o1{width:420px;height:420px;top:-120px;left:-100px;background:var(--glow-blue)}
+.o2{width:360px;height:360px;bottom:-120px;right:-80px;background:var(--glow-orchid);animation-delay:-6s}
+.o3{width:200px;height:200px;top:45%;left:60%;background:color-mix(in srgb,var(--blue) 25%,transparent);animation-delay:-11s}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(color-mix(in srgb,var(--blue) 7%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--blue) 7%,transparent) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000 10%,transparent 70%)}
+
+/* ---------- Top-right controls (stay top-right in RTL too) ---------- */
+.corner-tools{position:fixed;top:20px;right:20px;z-index:20;display:flex;gap:10px}
+.icon-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--blue);border-radius:13px;background:color-mix(in srgb,var(--surface) 80%,transparent);color:var(--blue);backdrop-filter:blur(10px);cursor:pointer;transition:background .25s,transform .25s var(--ease)}
+.icon-btn:hover{background:var(--raised);transform:translateY(-2px)}
+.icon-btn:active{transform:scale(.94)}
+#theme-toggle .moon{display:none}
+:root[data-theme=light] #theme-toggle .sun{display:none}
+:root[data-theme=light] #theme-toggle .moon{display:block}
+#direction-toggle[aria-pressed=true]{background:var(--blue);color:var(--primary-ink)}
+
+/* ---------- Page + card ---------- */
+.page{min-height:100vh;min-height:100svh;display:grid;place-items:center;padding:84px 20px 40px}
+.card{width:100%;max-width:560px;padding:40px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(160deg,color-mix(in srgb,var(--panel) 92%,transparent),color-mix(in srgb,var(--surface) 92%,transparent));backdrop-filter:blur(18px);box-shadow:0 40px 90px var(--shadow);animation:card-in .8s var(--ease) both}
+
+/* Logo inside the card */
+.card-brand{display:flex;flex-direction:column;align-items:center;gap:6px;margin:0 auto 26px;width:max-content;text-decoration:none}
+.card-brand img{width:78px;height:78px;object-fit:contain;transition:transform .5s var(--ease)}
+.card-brand:hover img{transform:rotate(-8deg) scale(1.05)}
+
+.card-head{text-align:center;margin-bottom:24px}
+.eyebrow{display:inline-flex;align-items:center;margin-bottom:12px;font-size:12px;font-weight:650;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.eyebrow i{width:6px;height:6px;margin-inline-end:10px;border-radius:50%;background:var(--blue);box-shadow:0 0 10px var(--blue);animation:pulse 2.4s ease-in-out infinite}
+h1{margin:0 0 12px;font-size:clamp(34px,6vw,44px);font-weight:550;letter-spacing:-.05em;line-height:1.08}
+.card-head p{font-size:15px;color:var(--muted)}
+
+/* Progress */
+.progress{height:6px;border-radius:6px;background:var(--line);overflow:hidden}
+.progress span{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--gradient-start),var(--blue));transition:width .5s var(--ease)}
+[dir=rtl] .progress span{margin-inline-start:auto}
+.progress-text{margin:8px 0 26px;font-size:13px;color:var(--muted)}
+
+/* ---------- Fields (vertical, full width) ---------- */
+form{display:flex;flex-direction:column}
+.field{display:flex;flex-direction:column;margin-bottom:18px}
+label{margin-bottom:8px;font-size:15px;font-weight:600}
+.opt{font-weight:400;color:var(--muted)}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{display:block;width:100%;min-height:var(--field-h);padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:var(--bg);font-size:16px;transition:border-color .25s,box-shadow .25s,background .25s}
+textarea{min-height:130px;resize:vertical}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:.75}
+input:hover,select:hover,textarea:hover{border-color:color-mix(in srgb,var(--blue) 55%,transparent)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 20%,transparent)}
+input[type=date]{color-scheme:inherit}
+.select-wrap{position:relative}
+.select-wrap::after{content:'';position:absolute;top:50%;inset-inline-end:18px;width:9px;height:9px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+select{appearance:none;-webkit-appearance:none;padding-inline-end:44px;cursor:pointer}
+.field.valid input,.field.valid select,.field.valid textarea{border-color:color-mix(in srgb,var(--ok) 60%,transparent)}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--danger);animation:shake .35s}
+.hint{margin-top:6px;font-size:13px;color:var(--muted)}
+.counter{text-align:end}
+.error{min-height:0;font-size:13px;color:var(--danger)}
+.error:not(:empty){margin-top:6px}
+
+/* Consent */
+.consent{position:relative;display:flex;gap:12px;align-items:flex-start;margin:6px 0 4px;font-size:14px;font-weight:400;color:var(--muted);cursor:pointer}
+.consent input{position:absolute;opacity:0;width:22px;height:22px;margin:0}
+.box{position:relative;flex-shrink:0;width:22px;height:22px;margin-top:1px;border:2px solid var(--blue);border-radius:7px;transition:background .25s}
+.box::after{content:'';position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid var(--primary-ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg) scale(0);transition:transform .3s var(--ease)}
+.consent input:checked+.box{background:var(--blue)}
+.consent input:checked+.box::after{transform:rotate(45deg) scale(1)}
+.consent input:focus-visible+.box{outline:3px solid var(--blue);outline-offset:3px}
+#consent-error:not(:empty){margin-bottom:6px}
+
+/* ---------- CTA: same width as the inputs ---------- */
+.cta{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:var(--field-h);margin-top:18px;padding:14px 20px;border:1px solid var(--primary);border-radius:14px;background:var(--primary);color:var(--primary-ink);font-size:17px;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 10px 26px var(--shadow);transition:background .3s,color .3s,border-color .3s,transform .25s var(--ease),box-shadow .3s}
+.cta::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#ffffff55 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s var(--ease)}
+.cta:hover{background:var(--secondary);border-color:var(--secondary);color:var(--secondary-ink);transform:translateY(-2px);box-shadow:0 16px 34px var(--shadow)}
+.cta:hover::after{transform:translateX(120%)}
+.cta:active{transform:translateY(0) scale(.99)}
+.cta-arrow{transition:transform .35s var(--ease)}
+.cta:hover .cta-arrow{transform:translateX(5px)}
+[dir=rtl] .cta-arrow{transform:scaleX(-1)}
+[dir=rtl] .cta:hover .cta-arrow{transform:scaleX(-1) translateX(5px)}
+.cta.loading{pointer-events:none}
+.cta.loading .cta-arrow{width:18px;height:18px;border:2.5px solid currentColor;border-right-color:transparent;border-radius:50%;font-size:0;animation:spin .7s linear infinite}
+
+/* ---------- Result ---------- */
+.result{display:flex;flex-direction:column;align-items:stretch;text-align:center;animation:card-in .6s var(--ease) both}
+.result[hidden]{display:none}
+.result:focus{outline:none}
+.check{width:72px;height:72px;margin:0 auto 18px}
+.check svg{width:100%;height:100%;fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.check circle{stroke-dasharray:151;stroke-dashoffset:151;animation:draw .7s var(--ease) forwards}
+.check path{stroke-dasharray:36;stroke-dashoffset:36;animation:draw .45s var(--ease) .55s forwards}
+.result h2{margin:0 0 8px;font-size:30px;font-weight:550;letter-spacing:-.04em}
+.result>p{color:var(--muted);font-size:15px}
+.summary{display:grid;gap:0;margin:22px 0 4px;padding:6px 18px;border:1px solid var(--line);border-radius:16px;background:var(--bg);text-align:start}
+.summary div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.summary div:last-child{border-bottom:0}
+.summary dt{color:var(--muted)}
+.summary dd{margin:0;font-weight:600;text-align:end;word-break:break-word}
+.ghost{width:100%;min-height:var(--field-h);margin-top:10px;border:1.5px solid var(--line);border-radius:14px;background:transparent;font-weight:650;cursor:pointer;transition:border-color .25s,background .25s}
+.ghost:hover{border-color:var(--blue);background:var(--surface)}
+
+/* ---------- Card footer links ---------- */
+.card-foot{display:flex;justify-content:space-between;gap:16px;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:14px}
+.card-foot a{color:var(--muted);text-decoration:none;transition:color .2s}
+.card-foot a:hover{color:var(--blue)}
+[dir=rtl] .card-foot a span{display:inline-block;transform:scaleX(-1)}
+
+/* ---------- Keyframes ---------- */
+@keyframes card-in{from{opacity:0;transform:translateY(26px) scale(.98)}}
+@keyframes float{0%,100%{transform:translate(0,0)}33%{transform:translate(40px,-30px)}66%{transform:translate(-30px,20px)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* ---------- Motion controls ---------- */
+:root[data-motion=paused] *,:root[data-motion=paused] *::before,:root[data-motion=paused] *::after{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .check circle,.check path{stroke-dashoffset:0}
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width:560px){
+  .corner-tools{top:12px;right:12px;gap:8px}
+  .icon-btn{width:40px;height:40px;border-radius:11px}
+  .page{padding:70px 12px 24px;align-items:start}
+  .card{padding:26px 20px;border-radius:22px}
+  .card-brand img{width:64px;height:64px}
+  .card-foot{flex-direction:column;align-items:center;gap:10px}
+}
+
+/* Fixora brand */
+.brand{flex-direction:row!important;align-items:center!important;gap:12px!important}
+.brand-emblem{width:52px;height:auto;object-fit:contain;background:none;border:0;box-shadow:none;
+  filter:drop-shadow(0 0 1px rgba(255,255,255,.55)) drop-shadow(0 4px 12px rgba(0,0,0,.25))}
+.brand-text{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-size:28px;font-weight:800;letter-spacing:-.04em;
+  background:linear-gradient(90deg,#0A3A75,#00A3F0);-webkit-background-clip:text;background-clip:text;color:transparent}
+:root:not([data-theme=light]) .brand-name{background:linear-gradient(90deg,#4FA8F0,#7FD6FF);-webkit-background-clip:text;background-clip:text}
+.brand-tagline{font-size:10px;margin-top:4px;color:var(--muted)}
+.site-footer .brand-emblem{width:72px}
+.site-footer .brand-name{font-size:34px}
+.card-brand{flex-direction:column!important}
+.card-brand .brand-text{align-items:center;text-align:center}
+.card-brand .brand-emblem{width:52px;height:auto}
+@media (max-width:720px){.brand-emblem{width:40px}.card-brand .brand-emblem{width:40px}.brand-name{font-size:22px}.brand-tagline{font-size:8px}}

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Prepare a repair enquiry for Fixora. Share your device and symptoms, then review your enquiry before sharing it with the studio.">
+<meta name="theme-color" content="#0E1C2A">
+<title>Book a Repair | Fixora — Mobile Repair &amp; Accessories</title>
+<link rel="icon" href="assets/branding/fixora-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/branding/fixora-logo.png">
+<link rel="preload" href="assets/fonts/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('repair-theme')||'dark';document.documentElement.dir=localStorage.getItem('repair-direction')||'ltr';if(localStorage.getItem('repair-motion')==='paused')document.documentElement.dataset.motion='paused'}catch(e){}</script>
+<link rel="stylesheet" href="book-repair.css">
+<script defer src="book-repair.js"></script>
+</head>
+<body class="page-book">
+<a class="skip" href="#booking-form">Skip to form</a>
+
+<!-- Page background -->
+<div class="bg" aria-hidden="true">
+  <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+  <div class="grid-lines"></div>
+</div>
+
+<!-- Theme + direction controls (top-right corner) -->
+<div class="corner-tools" role="group" aria-label="Display settings">
+  <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Change theme">
+    <svg class="ui-icon sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+    <svg class="ui-icon moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+  </button>
+  <button class="icon-btn" id="direction-toggle" type="button" aria-label="Switch to right-to-left layout" title="Change text direction" aria-pressed="false">
+    <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4"/></svg>
+  </button>
+</div>
+
+<main class="page">
+  <section class="card" aria-labelledby="form-title">
+
+    <!-- Logo inside the card -->
+    <a class="card-brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+
+    <div class="card-head">
+      <span class="eyebrow"><i></i>Repair enquiry</span>
+      <h1 id="form-title">Book a repair.</h1>
+      <p>Tell us about your phone. Your enquiry is prepared on this device for you to review — nothing is sent and no appointment is confirmed yet.</p>
+    </div>
+
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+    <p class="progress-text" id="progress-text" aria-live="polite">0 of 6 required fields complete</p>
+
+    <form id="booking-form" novalidate>
+      <!-- Every field is stacked one after another, full width -->
+      <div class="field">
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Priya Raghavan" required maxlength="80">
+        <p class="error" id="name-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+        <p class="error" id="email-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone number <span class="opt">(optional)</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91 98765 43210" maxlength="20">
+        <p class="error" id="phone-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="model">Phone model</label>
+        <input id="model" name="model" type="text" placeholder="e.g. Galaxy A54 or iPhone 13" required maxlength="80">
+        <p class="error" id="model-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="service">What do you need help with?</label>
+        <div class="select-wrap">
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Choose a service</option>
+            <option value="screen">Screen &amp; display repair</option>
+            <option value="battery">Battery &amp; power</option>
+            <option value="software">Software support</option>
+            <option value="charging">Charging port &amp; connections</option>
+            <option value="backglass">Back glass &amp; body</option>
+            <option value="accessory">Accessory fit &amp; availability</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <p class="error" id="service-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="tier">Device range <span class="opt">(optional)</span></label>
+        <div class="select-wrap">
+          <select id="tier" name="tier">
+            <option value="">Not sure</option>
+            <option value="standard">Everyday models</option>
+            <option value="premium">Premium models</option>
+            <option value="flagship">Latest flagships</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="date">Preferred visit date</label>
+        <input id="date" name="date" type="date" required>
+        <p class="hint">Subject to shop confirmation.</p>
+        <p class="error" id="date-error" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="details">What happened?</label>
+        <textarea id="details" name="details" rows="5" maxlength="600" placeholder="Describe the problem in your own words — when it started and what you've noticed." required></textarea>
+        <p class="hint counter"><span id="details-count">0</span>/600</p>
+        <p class="error" id="details-error" aria-live="polite"></p>
+      </div>
+
+      <label class="consent">
+        <input id="consent" name="consent" type="checkbox" required>
+        <span class="box" aria-hidden="true"></span>
+        <span>I understand this prepares an enquiry file only. Nothing is sent and no appointment is confirmed until the studio replies.</span>
+      </label>
+      <p class="error" id="consent-error" aria-live="polite"></p>
+
+      <!-- CTA matches the input width -->
+      <button class="cta" type="submit" id="submit-btn">
+        <span class="cta-label">Prepare my enquiry</span>
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </button>
+    </form>
+
+    <!-- Success state -->
+    <div class="result" id="booking-result" hidden tabindex="-1">
+      <div class="check" aria-hidden="true"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="m15 27 7 7 15-16"/></svg></div>
+      <h2>Your enquiry is ready.</h2>
+      <p>Download it and share it with the studio. Nothing has been sent and no appointment is confirmed.</p>
+      <dl class="summary" id="summary"></dl>
+      <a class="cta" id="download-link" download="fixora-enquiry.txt">
+        <span class="cta-label">Download my enquiry</span>
+        <span class="cta-arrow" aria-hidden="true">↓</span>
+      </a>
+      <button type="button" class="ghost" id="edit-btn">Edit details</button>
+    </div>
+
+    <div class="card-foot">
+      <a href="pricing.html">See pricing guide</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>

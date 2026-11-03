@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Your phone holds your everyday. Give it thoughtful repairs, honest guidance, and accessories that go the distance.">
+<meta name="theme-color" content="#0E1C2A">
+<meta property="og:title" content="Home | Fixora">
+<meta property="og:description" content="Your phone holds your everyday. Give it thoughtful repairs, honest guidance, and accessories that go the distance.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://re-pair-mobile-studio-281026.blackdill8.chatgpt.site/index.html">
+<title>Home | Fixora — Mobile Repair &amp; Accessories</title>
+<link rel="icon" href="assets/branding/fixora-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/branding/fixora-logo.png">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('repair-theme')||'dark';document.documentElement.dir=localStorage.getItem('repair-direction')||'ltr';if(localStorage.getItem('repair-motion')==='paused')document.documentElement.dataset.motion='paused'}catch(e){}</script>
+<link rel="stylesheet" href="index.css">
+<script defer src="index.js"></script>
+</head>
+<body class="page-index">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-wrap">
+    <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <details class="home-dropdown">
+        <summary aria-current="page">Home <span aria-hidden="true">⌄</span></summary>
+        <div>
+          <a href="index.html" aria-current="page">Home 1 · The repair edit</a>
+          <a href="home2.html">Home 2 · A second life</a>
+        </div>
+      </details>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="pricing.html">Pricing Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch to light theme" title="Change theme">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+      <button class="icon-btn" id="direction-toggle" aria-label="Switch to right-to-left layout" title="Change text direction" aria-pressed="false">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4"/></svg>
+      </button>
+      <a class="header-book btn primary" href="book-repair.html">Book a Repair</a>
+      <button class="menu-toggle icon-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1>Back to life.<br><em>Better than ever.</em></h1>
+        <p>Your phone holds your everyday. Give it thoughtful repairs, honest guidance, and accessories that go the distance.</p>
+        <div class="actions">
+          <a class="btn primary" href="book-repair.html">Book a repair<span aria-hidden="true">↗</span></a>
+          <a class="btn ghost" href="services.html">Find your repair<span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="trust-row">
+          <li><b>01</b>Diagnosis before a decision</li>
+          <li><b>02</b>Parts &amp; pricing explained</li>
+          <li><b>03</b>Final checks at handover</li>
+        </ul>
+      </div>
+
+      <div class="hero-stage">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="device-float">
+          <img class="hero-object" src="https://images.unsplash.com/photo-1550041473-d296a3a8a18a?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" data-fallback="assets/images/A%20Small%20Shop%20That%20Keeps%20Life%20Connected%20%F0%9F%93%B1%F0%9F%94%A7.jpeg" alt="Technician repairing an Android smartphone at a workbench" width="1000" height="760">
+        </div>
+        <span class="floating-label label-a"><i></i>PRECISION. IN EVERY DETAIL.</span>
+
+        <!-- Quick symptom check (powered by index.js) -->
+        <div class="quick-check" aria-labelledby="quick-check-title">
+          <h2 id="quick-check-title" class="quick-title">What's going on?</h2>
+          <label for="symptom" class="sr-only">Choose your phone's issue</label>
+          <select id="symptom">
+            <option value="screen">Cracked or unresponsive screen</option>
+            <option value="battery">Battery drains or phone shuts down</option>
+            <option value="software">Slow, freezing or crashing</option>
+            <option value="charging">Won't charge properly</option>
+          </select>
+          <div id="symptom-result" class="result-panel" aria-live="polite"></div>
+          <a id="symptom-link" class="text-link" href="services.html#screen">See this service <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICE TICKER ================= -->
+  <div class="ticker" aria-label="Services we cover">
+    <div class="ticker-track">
+      <ul>
+        <li>Screen &amp; display</li><li>Battery health</li><li>Software support</li><li>Charging ports</li><li>Cases &amp; glass</li><li>Audio essentials</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>Screen &amp; display</li><li>Battery health</li><li>Software support</li><li>Charging ports</li><li>Cases &amp; glass</li><li>Audio essentials</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================= REPAIRS (BENTO) ================= -->
+  <section id="repairs" class="section">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow"><i></i>Repairs</span>
+          <h2>A fix for the things<br>you can't put down.</h2>
+        </div>
+        <p>Choose the issue that sounds familiar. Every repair starts with a device assessment.</p>
+      </div>
+
+      <div class="bento">
+        <article class="card card-wide reveal">
+          <img src="https://images.unsplash.com/photo-1712600096342-0445dbb13c20?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" data-fallback="assets/images/Back%20glass%20replacement%20iPhone%20XR.jpeg" alt="Opened smartphone showing its broken display and circuit board" width="1000" height="760" loading="lazy">
+          <div class="card-body">
+            <span class="eyebrow">Display care</span>
+            <h3>A clearer view.</h3>
+            <p>Cracks, flickering, and unresponsive touch. Explore screen replacement options.</p>
+            <a class="text-link" href="services.html#screen">Explore screen care <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <img src="https://images.unsplash.com/photo-1721332154191-ba5f1534266e?auto=format&amp;fit=crop&amp;w=900&amp;q=75" data-fallback="assets/images/Cellphone%20repair.jpeg" alt="Hands working on small electronic components" width="1000" height="760" loading="lazy">
+          <div class="card-body">
+            <span class="eyebrow">Power, restored</span>
+            <h3>More day. Less charging.</h3>
+            <p>Unexpected shutdowns or a battery that won't last? Start with a battery health check.</p>
+            <a class="text-link" href="services.html#battery">Restore battery life <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <img src="https://images.unsplash.com/photo-1578610257589-1fc92a1448d2?auto=format&amp;fit=crop&amp;w=900&amp;q=75" data-fallback="assets/images/Phone%20Screen%20Protector%20Installation%20Service%20in%20SoDo.jpeg" alt="Person holding a smartphone" width="1000" height="760" loading="lazy">
+          <div class="card-body">
+            <span class="eyebrow">Software support</span>
+            <h3>Back in your flow.</h3>
+            <p>Slow apps, update errors, and frustrating freezes. Find a sensible route forward.</p>
+            <a class="text-link" href="services.html#software">Resolve software issues <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="card card-text reveal">
+          <div class="card-body">
+            <span class="card-icon" aria-hidden="true">
+              <svg class="ui-icon" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+            </span>
+            <span class="eyebrow">Charging &amp; connections</span>
+            <h3>Plugged in, properly.</h3>
+            <p>Loose cable, slow charge, or no connection at all? We check the cable, adapter and port together.</p>
+            <a class="text-link" href="services.html#additional">Check charging care <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONSIDERED CARE ================= -->
+  <section id="considered-care" class="section alt">
+    <div class="wrap split">
+      <figure class="visual reveal">
+        <img class="familiar-phone-image" src="https://images.unsplash.com/photo-1658212700861-693ed40a573b?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" data-fallback="assets/images/familiar-phone-repair.png" alt="Technician carefully repairing an iPhone" width="1200" height="630" loading="lazy">
+      </figure>
+      <div class="copy reveal">
+        <span class="eyebrow"><i></i>Why repair</span>
+        <h2>Familiar phone.<br>Fresh possibilities.</h2>
+        <p>You don't always need a new device. A considered repair can restore the parts of your everyday that matter, with options explained before work begins.</p>
+        <ul class="check-list">
+          <li>A diagnosis before a decision</li>
+          <li>Parts and pricing explained clearly</li>
+          <li>Final checks before handover</li>
+        </ul>
+        <a class="btn line" href="about.html">See what makes us different<span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ESTIMATOR ================= -->
+  <section id="estimator" class="section">
+    <div class="wrap split reverse">
+      <div class="estimate-tool reveal">
+        <label for="repair-type">Repair type</label>
+        <select id="repair-type">
+          <option value="screen">Screen replacement</option>
+          <option value="battery">Battery replacement</option>
+          <option value="software">Software support</option>
+          <option value="charging">Charging port</option>
+        </select>
+        <label for="device-tier">Device range</label>
+        <select id="device-tier">
+          <option value="standard">Everyday models</option>
+          <option value="premium">Premium models</option>
+          <option value="flagship">Latest flagships</option>
+        </select>
+        <div class="estimate-result" aria-live="polite">
+          <span>ILLUSTRATIVE RANGE</span>
+          <strong id="estimate-price">₹1,399 – ₹2,399</strong>
+          <p>Your model, diagnosis, part selection and availability set the final quote.</p>
+        </div>
+        <a id="estimate-enquiry" class="btn primary full-btn" href="book-repair.html">Prepare an enquiry<span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="copy reveal">
+        <span class="eyebrow"><i></i>Pricing preview</span>
+        <h2>Know the options.<br>Then make the call.</h2>
+        <p>Pick a repair and a device range to see a sample starting range. No surprises later: you'll review a confirmed quote before any work begins.</p>
+        <div class="price-chips">
+          <span>Screen care <b>from ₹1,499*</b></span>
+          <span>Battery care <b>from ₹999*</b></span>
+        </div>
+        <p class="small">*Illustrative starting prices, not a repair quote.</p>
+        <a class="btn line" href="pricing.html">Open the full pricing guide<span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section id="the-process" class="section alt">
+    <div class="wrap">
+      <div class="section-heading center">
+        <div>
+          <span class="eyebrow"><i></i>How it works</span>
+          <h2>From first check<br>to the final detail.</h2>
+        </div>
+      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="step-num">01</span>
+          <h3>Tell us what happened.</h3>
+          <p>Share your model and symptoms. No technical vocabulary needed.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">02</span>
+          <h3>Understand your options.</h3>
+          <p>Review the proposed repair, part options, and confirmed quote.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-num">03</span>
+          <h3>Get back to your day.</h3>
+          <p>Check the result together and take away practical aftercare advice.</p>
+        </li>
+      </ol>
+      <div class="process-banner reveal">
+        <img src="https://images.unsplash.com/photo-1611396000732-f8c9a933424f?auto=format&amp;fit=crop&amp;w=1600&amp;q=75" data-fallback="assets/images/_%20%281%29.jpeg" alt="Electronic devices and components on a workbench" width="1000" height="760" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACCESSORIES ================= -->
+  <section id="daily-upgrades" class="section">
+    <div class="wrap">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow"><i></i>Accessories</span>
+          <h2>Better together.</h2>
+        </div>
+        <p>Essentials chosen to fit your exact model, so your phone stays protected and powered.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <img src="assets/images/home-accessory-earbuds.png" alt="White wireless earbuds in their charging case" width="1920" height="768" loading="lazy">
+          <div class="card-body">
+            <span class="eyebrow">Listen well</span>
+            <h3>Sound, without the fuss.</h3>
+            <p>Explore audio essentials and check device pairing.</p>
+            <a class="text-link" href="accessories.html?category=audio#collection">Discover audio <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img src="assets/images/home-accessory-chargers-cables.png" alt="Pastel phone chargers and braided charging cables" width="1000" height="760" loading="lazy">
+          <div class="card-body">
+            <span class="eyebrow">Power smarter</span>
+            <h3>A charge that fits.</h3>
+            <p>Compare charging formats before choosing your next adapter.</p>
+            <a class="text-link" href="accessories.html?category=power#collection">Find chargers <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img src="assets/images/home-accessory-screen-protector.png" alt="Smartphone with a screen protector" width="1000" height="760" loading="lazy">
+          <div class="card-body">
+            <span class="eyebrow">Carry with confidence</span>
+            <h3>Protection, considered.</h3>
+            <p>A case and screen protector selected for your exact model.</p>
+            <a class="text-link" href="accessories.html?category=protection#collection">Choose protection <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="section alt">
+    <div class="wrap faq-grid">
+      <div class="reveal">
+        <span class="eyebrow"><i></i>Good to know</span>
+        <h2>Questions,<br>answered.</h2>
+        <p>Still unsure? Prepare an enquiry with your model and symptoms and we'll help you ask the right questions.</p>
+        <a class="btn line" href="contact.html">Contact the studio<span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="faq-list reveal">
+        <details>
+          <summary>Will I see a quote before work begins?<span aria-hidden="true">+</span></summary>
+          <p>Yes. Every repair starts with an assessment, and you review the proposed repair, part options and confirmed quote before deciding.</p>
+        </details>
+        <details>
+          <summary>Are the prices on this site final?<span aria-hidden="true">+</span></summary>
+          <p>No. They are illustrative starting prices. Your model, diagnosis, part selection and availability determine the final quote.</p>
+        </details>
+        <details>
+          <summary>Should I back up my phone first?<span aria-hidden="true">+</span></summary>
+          <p>Where possible, yes — especially for software issues, where a reset may be considered.</p>
+        </details>
+        <details>
+          <summary>Can you check if an accessory fits my phone?<span aria-hidden="true">+</span></summary>
+          <p>Yes. Choose an accessory and prepare an enquiry with your exact model to check compatibility and availability.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLOSING ================= -->
+  <section id="next-step" class="section closing">
+    <div class="wrap closing-grid">
+      <div class="closing-copy">
+        <h2>Your everyday.<br>Reconnected.</h2>
+        <p>Start with your device. We'll help you prepare the right questions.</p>
+        <div class="actions">
+          <a class="btn primary" href="book-repair.html">Book a repair<span aria-hidden="true">↗</span></a>
+          <a class="btn ghost" href="home2.html">Try our second home<span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="closing-art">
+        <img src="assets/images/home1-cta-repair-transparent.png" alt="Smartphone repair components arranged separately" width="1024" height="768" loading="lazy">
+        <div class="closing-ring" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+        <p>Thoughtful repairs and considered accessories. Keep your everyday connected, one detail at a time.</p>
+        <nav class="footer-circles" aria-label="Quick actions">
+          <a href="services.html" aria-label="Explore repairs"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 20 7-7m3-9a6 6 0 0 0-6 8l-6 6 4 4 6-6a6 6 0 0 0 8-6l-4 3-4-4 3-5Z"/></svg></a>
+          <a href="accessories.html" aria-label="Browse accessories"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg></a>
+          <a href="book-repair.html" aria-label="Prepare a repair enquiry"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+          <button id="motion-toggle" aria-pressed="false" aria-label="Pause decorative animations" title="Pause animations">Ⅱ</button>
+        </nav>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="accessories.html">Accessories</a><a href="pricing.html">Pricing Guide</a><a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Our services</h3>
+        <a href="services.html#screen">Screen &amp; display</a><a href="services.html#battery">Battery &amp; power</a><a href="services.html#software">Software support</a><a href="services.html#additional">Charging &amp; connections</a><a href="pricing.html#estimator">Repair estimates</a><a href="accessories.html#collection">Everyday accessories</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact us</h3>
+        <a href="contact.html#before-visit"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Plan your visit</span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><span>Discuss your device</span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Prepare a repair enquiry</span></a>
+        <a href="contact.html#visit-guide"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg><span>Your preferred visit date<br><small>Subject to shop confirmation</small></span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fixora. Website concept.</span>
+      <span>Repair thoughtfully. Reconnect beautifully.</span>
+      <span class="photo-credit">Photos: Clint Bustrillos, Aweek Jiang, Samsung Memory, Erik Mclean, Revendo, insung yoon, Howard Bouchevereau, Solen Feyissa, Alina Chernysheva &amp; Joel Rohland on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top" hidden>↑</button>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fixora accessories — cases, screen protectors, chargers, cables and audio, chosen to fit your exact phone model.">
+<meta name="theme-color" content="#0E1C2A">
+<meta property="og:title" content="Accessories | Fixora">
+<meta property="og:description" content="Power, audio and protection essentials chosen for your exact phone model.">
+<meta property="og:type" content="website">
+<title>Accessories | Fixora — Mobile Repair &amp; Accessories</title>
+<link rel="icon" href="assets/branding/fixora-logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/branding/fixora-logo.png">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('repair-theme')||'dark';document.documentElement.dir=localStorage.getItem('repair-direction')||'ltr';if(localStorage.getItem('repair-motion')==='paused')document.documentElement.dataset.motion='paused'}catch(e){}</script>
+<link rel="stylesheet" href="accessories.css">
+<script defer src="accessories.js"></script>
+</head>
+<body class="page-accessories">
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-wrap">
+    <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+    <nav id="main-nav" aria-label="Main navigation">
+      <details class="home-dropdown">
+        <summary>Home <span aria-hidden="true">⌄</span></summary>
+        <div>
+          <a href="index.html">Home 1 · The repair edit</a>
+          <a href="home2.html">Home 2 · A second life</a>
+        </div>
+      </details>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="accessories.html" aria-current="page">Accessories</a>
+      <a href="pricing.html">Pricing Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch to light theme" title="Change theme">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+      <button class="icon-btn" id="direction-toggle" aria-label="Switch to right-to-left layout" title="Change text direction" aria-pressed="false">
+        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h17m-4-4 4 4-4 4M21 17H4m4-4-4 4 4 4"/></svg>
+      </button>
+      <a class="header-book btn primary" href="book-repair.html">Book a Repair</a>
+      <button class="menu-toggle icon-btn" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== SECTION 1 · FULL-VIEWPORT HERO (expanding category panels) ===== -->
+  <section class="acc-hero" id="top">
+    <div class="hero-intro">
+      <h1 class="up" style="--d:1">Small things.<br><em>Everyday</em><br>difference.</h1>
+      <p class="up" style="--d:2">Power, audio and protection essentials, chosen to fit your exact phone model.</p>
+
+      <!-- CTA pattern: rotating text badge -->
+      <a class="spin-badge up" style="--d:3" href="#collection" aria-label="Browse the collection">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <text><textPath href="#badge-circle">BROWSE THE COLLECTION • BROWSE THE COLLECTION • </textPath></text>
+        </svg>
+        <span class="badge-core" aria-hidden="true">↓</span>
+      </a>
+    </div>
+
+    <div class="panels">
+      <a class="panel" href="?category=power#collection" data-filter-link="power" style="--d:2">
+        <img src="assets/images/accessories-banner-power-bank.png" alt="Black portable power banks">
+        <span class="panel-label"><small>01</small><b>Power</b><span class="panel-more">Chargers &amp; cables →</span></span>
+      </a>
+      <a class="panel" href="?category=audio#collection" data-filter-link="audio" style="--d:3">
+        <img src="assets/images/accessories-banner-headphones.png" alt="Headphones in an audio studio">
+        <span class="panel-label"><small>02</small><b>Audio</b><span class="panel-more">Earbuds &amp; headphones →</span></span>
+      </a>
+      <a class="panel" href="?category=protection#collection" data-filter-link="protection" style="--d:4">
+        <img src="assets/images/accessories-banner-cables.png" alt="Braided USB charging cables">
+        <span class="panel-label"><small>03</small><b>Protection</b><span class="panel-more">Cases &amp; glass →</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2 · COMPATIBILITY CHECKER ===== -->
+  <section class="section" id="fit-check">
+    <div class="wrap fit-grid">
+      <div class="reveal">
+        <span class="eyebrow"><i></i>Fit check</span>
+        <h2>Find what fits<br>your phone.</h2>
+        <p>Answer two quick questions to see which accessory types make sense. Not sure? We'll check your exact model in store.</p>
+      </div>
+      <div class="fit-card reveal">
+        <fieldset>
+          <legend>1 · What charging port does your phone have?</legend>
+          <div class="seg" data-q="port">
+            <button type="button" aria-pressed="false" data-v="usbc">USB-C</button>
+            <button type="button" aria-pressed="false" data-v="lightning">Lightning</button>
+            <button type="button" aria-pressed="false" data-v="unsure">Not sure</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2 · Does it support wireless charging?</legend>
+          <div class="seg" data-q="wireless">
+            <button type="button" aria-pressed="false" data-v="yes">Yes</button>
+            <button type="button" aria-pressed="false" data-v="no">No</button>
+            <button type="button" aria-pressed="false" data-v="unsure">Not sure</button>
+          </div>
+        </fieldset>
+        <div class="fit-result" id="fit-result" aria-live="polite">
+          <p class="fit-placeholder">Your suggestions will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 · COLLECTION (filterable) ===== -->
+  <section class="section alt" id="collection">
+    <div class="wrap">
+      <div class="coll-head reveal">
+        <div>
+          <span class="eyebrow"><i></i>The collection</span>
+          <h2>Everyday essentials.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter accessories">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="power" aria-pressed="false">Power</button>
+          <button type="button" data-filter="audio" aria-pressed="false">Audio</button>
+          <button type="button" data-filter="protection" aria-pressed="false">Protection</button>
+        </div>
+      </div>
+      <p class="filter-status" id="filter-status" aria-live="polite">Showing 6 essentials</p>
+
+      <div class="products">
+        <article class="product-card" data-category="protection">
+          <div class="pc-media">
+            <img src="assets/images/accessories-collection-case.png" alt="Clear protective phone case with magnetic ring" loading="lazy">
+            <span class="pc-cat">Protection</span>
+            <a class="pc-quick" href="book-repair.html?accessory=case">Check fit &amp; availability</a>
+          </div>
+          <div class="pc-body"><h3>Everyday Shield Case</h3><p>A slim, protective case selected for your exact model.</p></div>
+        </article>
+        <article class="product-card" data-category="protection">
+          <div class="pc-media">
+            <img src="assets/images/accessories-collection-screen-protectors.png" alt="Tempered glass screen protectors" loading="lazy">
+            <span class="pc-cat">Protection</span>
+            <a class="pc-quick" href="book-repair.html?accessory=glass">Check fit &amp; availability</a>
+          </div>
+          <div class="pc-body"><h3>Edge Glass Protector</h3><p>Screen glass cut to your display, applied with care.</p></div>
+        </article>
+        <article class="product-card" data-category="power">
+          <div class="pc-media">
+            <img src="assets/images/accessories-collection-adapter.png" alt="Compact USB-C charging adapter" loading="lazy">
+            <span class="pc-cat">Power</span>
+            <a class="pc-quick" href="book-repair.html?accessory=adapter">Check fit &amp; availability</a>
+          </div>
+          <div class="pc-body"><h3>Compact USB-C Adapter</h3><p>A small wall adapter matched to your phone's charging format.</p></div>
+        </article>
+        <article class="product-card" data-category="power">
+          <div class="pc-media">
+            <img src="assets/images/accessories-collection-cable.png" alt="Braided USB charging cables" loading="lazy">
+            <span class="pc-cat">Power</span>
+            <a class="pc-quick" href="book-repair.html?accessory=cable">Check fit &amp; availability</a>
+          </div>
+          <div class="pc-body"><h3>Braided USB-C Cable</h3><p>A durable cable for everyday charging and data.</p></div>
+        </article>
+        <article class="product-card" data-category="audio">
+          <div class="pc-media">
+            <img src="assets/images/accessories-collection-earbuds.png" alt="Wireless earbuds in a charging case" loading="lazy">
+            <span class="pc-cat">Audio</span>
+            <a class="pc-quick" href="book-repair.html?accessory=earbuds">Check fit &amp; availability</a>
+          </div>
+          <div class="pc-body"><h3>Pocket Wireless Earbuds</h3><p>Compact earbuds. We'll check pairing with your phone.</p></div>
+        </article>
+        <article class="product-card" data-category="audio">
+          <div class="pc-media">
+            <img src="assets/images/accessories-collection-headphones.png" alt="Red over-ear wireless headphones" loading="lazy">
+            <span class="pc-cat">Audio</span>
+            <a class="pc-quick" href="book-repair.html?accessory=headphones">Check fit &amp; availability</a>
+          </div>
+          <div class="pc-body"><h3>Studio Wireless Headphones</h3><p>Over-ear comfort for longer listening.</p></div>
+        </article>
+      </div>
+      <p class="coll-note">Availability and compatibility are confirmed for your exact model before purchase.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4 · SPOTLIGHT WITH HOTSPOTS ===== -->
+  <section class="section" id="spotlight">
+    <div class="wrap spot-grid">
+      <figure class="spot-media reveal">
+        <img src="https://images.unsplash.com/photo-1553775501-23714990d973?auto=format&amp;fit=crop&amp;w=1300&amp;q=75" data-fallback="assets/images/wireless-earbuds-banner.png" alt="Black wireless earbuds and charging case" loading="lazy">
+        <button type="button" class="hotspot" style="--x:34%;--y:42%" aria-expanded="false" aria-describedby="hs1"><span class="sr-only">Pairing</span></button>
+        <span class="hs-tip" id="hs1" role="tooltip" style="--x:34%;--y:42%"><b>Pairing</b>We check Bluetooth pairing with your phone before you leave.</span>
+        <button type="button" class="hotspot" style="--x:62%;--y:30%" aria-expanded="false" aria-describedby="hs2"><span class="sr-only">Fit</span></button>
+        <span class="hs-tip" id="hs2" role="tooltip" style="--x:62%;--y:30%"><b>Fit</b>Ask about comfort and fit for longer listening.</span>
+        <button type="button" class="hotspot" style="--x:52%;--y:70%" aria-expanded="false" aria-describedby="hs3"><span class="sr-only">Charging</span></button>
+        <span class="hs-tip" id="hs3" role="tooltip" style="--x:52%;--y:70%"><b>Charging</b>Check the case's charging connector matches your cables.</span>
+      </figure>
+      <div class="reveal">
+        <span class="eyebrow"><i></i>Spotlight · Audio</span>
+        <h2>Sound,<br>without the fuss.</h2>
+        <p>Hover or tap the points on the photo to see what we check before you take a pair home.</p>
+        <ul class="spot-list">
+          <li><span>01</span>Pairing tested with your phone</li>
+          <li><span>02</span>Fit and comfort talked through</li>
+          <li><span>03</span>Charging format matched</li>
+        </ul>
+        <a class="arrow-link" href="?category=audio#collection" data-filter-link="audio">See audio essentials <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5 · PROTECTION COMPARE SLIDER ===== -->
+  <section class="section alt" id="protection">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow"><i></i>Why protect</span>
+        <h2>One drop can<br>change everything.</h2>
+        <p>Drag the handle to compare. A case and screen glass are a small step that can save a repair.</p>
+      </div>
+      <div class="compare reveal" id="compare" style="--pos:50%">
+        <img class="cmp-after" src="assets/images/accessories-protection-after.png" alt="Smartphone protected by a digital shield" loading="lazy">
+        <div class="cmp-before-wrap">
+          <img class="cmp-before" src="assets/images/accessories-protection-before.png" alt="Screen protector being applied to a smartphone" loading="lazy">
+        </div>
+        <span class="cmp-tag left">Unprotected</span>
+        <span class="cmp-tag right">Protected</span>
+        <div class="cmp-handle" aria-hidden="true"><span>⟷</span></div>
+        <label class="sr-only" for="cmp-range">Compare unprotected and protected</label>
+        <input type="range" id="cmp-range" min="0" max="100" value="50">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6 · CHARGING FORMATS CAROUSEL ===== -->
+  <section class="section" id="formats">
+    <div class="wrap">
+      <div class="car-head reveal">
+        <div>
+          <span class="eyebrow"><i></i>Charging, explained</span>
+          <h2>Know your format.</h2>
+        </div>
+        <div class="car-arrows">
+          <button type="button" id="car-prev" aria-label="Previous card">←</button>
+          <button type="button" id="car-next" aria-label="Next card">→</button>
+        </div>
+      </div>
+      <div class="carousel" id="carousel" tabindex="0" aria-label="Charging formats">
+        <article class="fmt-card reveal" style="--stagger:0">
+          <span class="fmt-icon" aria-hidden="true">C</span>
+          <h3>USB-C</h3>
+          <p>A reversible connector used by most current Android phones and newer iPhones. One cable often charges several devices.</p>
+          <span class="fmt-tag">Most common today</span>
+        </article>
+        <article class="fmt-card reveal" style="--stagger:1">
+          <span class="fmt-icon" aria-hidden="true">L</span>
+          <h3>Lightning</h3>
+          <p>The connector on many older iPhones. If your phone uses it, check your cable's connector before buying.</p>
+          <span class="fmt-tag">Older iPhones</span>
+        </article>
+        <article class="fmt-card reveal" style="--stagger:2">
+          <span class="fmt-icon" aria-hidden="true">≋</span>
+          <h3>Wireless</h3>
+          <p>Charging pads work only with phones that support wireless charging. Thick cases can affect it.</p>
+          <span class="fmt-tag">Check support</span>
+        </article>
+        <article class="fmt-card reveal" style="--stagger:3">
+          <span class="fmt-icon" aria-hidden="true">ϟ</span>
+          <h3>Fast charging</h3>
+          <p>Fast-charging standards vary by brand. A matching adapter and cable help you get the speed your phone supports.</p>
+          <span class="fmt-tag">Match the adapter</span>
+        </article>
+        <article class="fmt-card reveal" style="--stagger:4">
+          <span class="fmt-icon" aria-hidden="true">?</span>
+          <h3>Still unsure?</h3>
+          <p>Bring your phone in. We'll check the port, your current cable and adapter, and suggest what fits.</p>
+          <a class="arrow-link" href="contact.html">Ask the studio <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <div class="car-dots" id="car-dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7 · CTA (rotating badge + floating collage) ===== -->
+  <section class="cta-collage" id="next-step">
+    <div class="wrap collage-grid">
+      <div class="collage" id="collage" aria-hidden="true">
+        <img class="cl a" src="assets/images/accessories-cta-charging.png" alt="" loading="lazy">
+        <img class="cl b" src="assets/images/accessories-cta-devices.png" alt="" loading="lazy">
+        <img class="cl c" src="assets/images/accessories-cta-collection.png" alt="" loading="lazy">
+      </div>
+      <div class="collage-copy reveal">
+        <span class="eyebrow"><i></i>Not sure what fits?</span>
+        <h2>Bring your phone.<br><em>We'll match it.</em></h2>
+        <p>Tell us your model and what you're looking for. We'll check compatibility and availability before you buy.</p>
+        <div class="cta-row">
+          <a class="spin-badge big" href="book-repair.html?accessory=case" aria-label="Check compatibility for your phone">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><path id="badge-circle-2" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+              <text><textPath href="#badge-circle-2">CHECK COMPATIBILITY • CHECK COMPATIBILITY • </textPath></text>
+            </svg>
+            <span class="badge-core" aria-hidden="true">→</span>
+          </a>
+          <div class="cta-side">
+            <a class="arrow-link" href="contact.html">Ask a question <span aria-hidden="true">→</span></a>
+            <a class="arrow-link" href="services.html">Need a repair instead? <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Fixora home">
+      <img class="brand-emblem" src="assets/branding/fixora-logo.png" alt="" width="1333" height="1180">
+      <span class="brand-text">
+        <span class="brand-name">Fixora</span>
+        <span class="brand-tagline">Precision care. Everyday connection.</span>
+      </span>
+    </a>
+        <p>Thoughtful repairs and considered accessories. Keep your everyday connected, one detail at a time.</p>
+        <nav class="footer-circles" aria-label="Quick actions">
+          <a href="services.html" aria-label="Explore repairs"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 20 7-7m3-9a6 6 0 0 0-6 8l-6 6 4 4 6-6a6 6 0 0 0 8-6l-4 3-4-4 3-5Z"/></svg></a>
+          <a href="accessories.html" aria-label="Browse accessories"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Zm4 0V5a3 3 0 0 1 6 0v2"/></svg></a>
+          <a href="book-repair.html" aria-label="Prepare a repair enquiry"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+          <button id="motion-toggle" aria-pressed="false" aria-label="Pause decorative animations" title="Pause animations">Ⅱ</button>
+        </nav>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="accessories.html">Accessories</a><a href="pricing.html">Pricing Guide</a><a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Our services</h3>
+        <a href="services.html#screen">Screen &amp; display</a><a href="services.html#battery">Battery &amp; power</a><a href="services.html#software">Software support</a><a href="services.html#additional">Charging &amp; connections</a><a href="pricing.html#estimator">Repair estimates</a><a href="accessories.html#collection">Everyday accessories</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact us</h3>
+        <a href="contact.html#before-visit"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Plan your visit<br><small>Location to be confirmed</small></span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><span>Discuss your device</span></a>
+        <a href="book-repair.html"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Prepare a repair enquiry</span></a>
+        <a href="contact.html#visit-guide"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg><span>Your preferred visit date<br><small>Subject to shop confirmation</small></span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Fixora. Website concept.</span>
+      <span>Repair thoughtfully. Reconnect beautifully.</span>
+      <span class="photo-credit">Photos: Solen Feyissa, Petr Macháček, Alina Chernysheva, Erik Mclean, Marcus Urbenz, Howard Bouchevereau &amp; Aweek Jiang on <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="to-top" aria-label="Back to top" hidden>↑</button>
+</body>
+</html>
